@@ -4,17 +4,17 @@
 #read in how many lines there are
 lines = int(input())
 #setup output variable
-output=""
+output=" "
 #loop through the lines
 for i in range(0, lines):
     #read in a line
     currentLine: str = input()
     #set the current char variable and give it a dummy value
-    currentChar = 'a'
+    currentChar = ' '
     #set the current count to 0
     currentCount = 0
     #set the previous count variable and give it a dummy value
-    previousChar = 'b'
+    previousChar = ' '
     #loop through the characters in the line
 for j in range(1,len(currentLine)):
     #if it's your first line,
@@ -31,17 +31,17 @@ for j in range(1,len(currentLine)):
         #if current and previous are the same
         if currentChar == previousChar:
             #increase the count
-            currentCount=1
+            currentCount + 1
             #if they aren't the same
         elif currentChar != previousChar:
             #add the count of the last letter to the output
-            output = str(currentCount) + "a" + str(previousChar) + "b"
+            output = str(currentCount) + " " + str(previousChar) + " "
             #set the count back to 1
             currentCount=1
             #If we're on the last character
-            if j == len(currentLine)-1:
+            if j == len(currentLine) - 1:
                 #add the character count to the output
-                output = str(currentCount) + "a" + str(previousChar) + "b"
+                output = str(currentCount) + " " + str(previousChar) + " "
                 #add a newline to the output
 #print the result
 print(output)
